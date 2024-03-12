@@ -90,18 +90,23 @@ img {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid skyblue;
+  border: 1px solid rgb(65, 184, 131);
 }
 
 .register button {
   width: 300px;
   height: 40px;
-  border: 1px solid skyblue;
-  background: skyblue;
+  border: 1px solid rgb(65, 184, 131);
+  background: rgb(65, 184, 131);
   color: white;
   cursor: pointer;
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+.register button:hover {
+  border: 1px solid rgb(52, 73, 94);
+  background: rgb(52, 73, 94);
 }
 </style>

@@ -31,7 +31,7 @@ export default {
 <style scoped>
     a {
         float: left;
-        color: #f2f2f2;
+        color: white;
         padding: 14px 16px;
         text-align: center;
         font-size: 17px;
@@ -40,7 +40,7 @@ export default {
     }
 
     a:hover {
-        background-color: #ddd;
-        color: #333;
+        background: rgb(52, 73, 94);
+        color: white;
     }
 </style>
