@@ -1,0 +1,12 @@
+@import './base.css';
+
+nav {
+  text-align: center;
+  background-color: #333;
+  overflow: hidden;
+  }
+@media (min-width: 1024px) {
+  body {
+    place-items: center;
+  }
+}
