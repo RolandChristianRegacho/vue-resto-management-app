@@ -11,9 +11,3 @@ import HeaderPage from "@/components/HeaderPage.vue"
     <HomePage />
   </main>
 </template>
-
-<style scoped>
-  main {
-    text-align: center;
-  }
-</style>

@@ -1,28 +1,32 @@
 <template>
     <div>
-        <a @click="home" id="test" href="#">Home</a>
-        <a @click="add" href="#">Add Restaurant</a>
-        <a @click="update" href="#">Update Restaurant</a>
+        <router-link to="/">Home</router-link>
+        <router-link to="/add_restaurant">Add Restaurant</router-link>
         <a @click="logout" href="#">Logout</a>
+        <a class="a_name">{{ name }}</a>
     </div>
 </template>
 
 <script>
 export default {
     name: "HeaderPage",
+    data() {
+        return {
+            name: ""
+        }
+    },
     methods: {
-        home() {
-            this.$router.push({name: "HomePage"})
-        },
-        add() {
-            this.$router.push({name: "AddPage"})
-        },
-        update() {
-            this.$router.push({name: "UpdatePage"})
-        },
         logout() {
             localStorage.clear()
             this.$router.push({name: "LoginPage"})
+        }
+    },
+    mounted() {
+        let user = localStorage.getItem("user-info");
+        this.name = JSON.parse(user)[0].name
+
+        if (!user) {
+            this.$router.push({ name: "LoginPage" });
         }
     }
 }
@@ -42,5 +46,13 @@ export default {
     a:hover {
         background: rgb(52, 73, 94);
         color: white;
+    }
+    .a_name {
+        float: right;
+        margin-right: 0;
+    }
+
+    .a_name:hover {
+        background: fixed;
     }
 </style>
